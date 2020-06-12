@@ -24,7 +24,7 @@ def get_labels(data):
             textobject.setFont('Courier', 14)
             textobject.textLine(text=' ')
             c.drawText(textobject)
-            textobject.textLine(text='SKU      : ' + row.SKU)
+            textobject.textLine(text='SKU      : ' + str(row.SKU))
             c.drawText(textobject)
             textobject.textLine(text='Color    : ' + row.Color)
             c.drawText(textobject)
