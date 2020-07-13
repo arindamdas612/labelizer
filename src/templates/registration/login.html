@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Dashio - Bootstrap Admin Template</title>
+  <title>Labelizer | Login</title>
 
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
@@ -32,18 +32,19 @@
       <form class="form-login" action="{% url 'login' %}" method="POST">
         <h2 class="form-login-heading">Labelizer</h2>
         {% if form.errors %}
-            <p>Invalid login credentials. Please try again!!!</p>
+        <p>Invalid login credentials. Please try again!!!</p>
         {% endif %}
         {% if next %}
-            <p>Please Login to access the page</p>
+        <p>Please Login to access the page</p>
         {% endif %}
         <div class="login-wrap">
-            {% csrf_token %}
-            <input type="input" class="form-control" name="username" id="inputEmail" placeholder="Username" required >
-            <br>
-            <input type="password" class="form-control" name="password" id="inputPass" placeholder="Password" required>
-            <br>
-            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+          {% csrf_token %}
+          <input type="input" class="form-control" name="username" id="inputEmail" placeholder="Username" required>
+          <br>
+          <input type="password" class="form-control" name="password" id="inputPass" placeholder="Password" required>
+          <br>
+          <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN
+            IN</button>
         </div>
       </form>
     </div>

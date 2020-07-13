@@ -15,11 +15,12 @@ def get_labels(data):
 
     for index, row in data.iterrows():
         mrp = '{:0,.2f}'.format(row.MRP)
+        product_name = row.Product_Name if row.Product_Name else 'UnNamed Product'
         for i in range(0, int(row.QTY)):
             textobject = c.beginText()
             textobject.setTextOrigin(3*mm, 5*mm)
             textobject.setFont('Courier', 10)
-            textobject.textLine(text='Big Fox - ' + row.Product_Name)
+            textobject.textLine(text='Big Fox - ' + product_name)
             c.drawText(textobject)
             textobject.setFont('Courier', 14)
             textobject.textLine(text=' ')
